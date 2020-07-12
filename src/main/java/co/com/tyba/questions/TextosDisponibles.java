@@ -19,6 +19,7 @@ public class TextosDisponibles implements Question<List<String>> {
         return new TextosDisponibles(objeto);
     }
 
+    //Método encargado de retornar todos los textos visibles en los objetos recibidos
     @Override
     public List<String> answeredBy(Actor actor) {
         return Text.of(objetos).viewedBy(actor).asList();

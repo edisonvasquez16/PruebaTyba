@@ -19,7 +19,7 @@ public class AccederModulo implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Scroll.to(MENU_HERRAMIENTAS),
-                MoveMouse.to(MENU_HERRAMIENTAS));
-        actor.attemptsTo(Click.on(SUBMENU_CALCULADORA_CREDITO));
+                MoveMouse.to(MENU_HERRAMIENTAS),
+                (Click.on(SUBMENU_CALCULADORA_CREDITO)));
     }
 }

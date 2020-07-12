@@ -16,6 +16,7 @@ public class NoDiligenciarFormulario implements Task {
         this.opcion = opcion;
     }
 
+    //Método encargado de acceder al módulo sin diligenciar campos
     @Override
     public <T extends Actor> void performAs(T actor) {
         switch (opcion){

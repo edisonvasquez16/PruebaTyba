@@ -36,8 +36,10 @@ Basada en un patrón de Diseño ScreenPlay el cual nos permite estructurar los p
 - Cucumber
 - SerenityBDD
 - Java
+- Lombok
 
 **Opciones**
 - Lenguaje Gherkin
 - Config UTF-8
 - Especificación de librerías en pom.xml
+- Serenity.conf (Configuración de ambientes de prueba, driver por default y rutas de drivers)

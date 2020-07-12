@@ -14,8 +14,8 @@ public class CalculoPrestamoPage {
 
     //Opciones de interacción
     public static final Target BTN_CALCULAR_CREDITO = Target.the("Botón calcular crédito").locatedBy("//button[@ng-click='calculateByMonthlyIncome()']");
-    public static final Target BTN_CALCULAR_CREDITO_DES = Target.the("Botón calcular crédito deshabilitado").locatedBy("//button[@ng-click='calculateByMonthlyIncome()' and @disabled]");
-    public static final Target BTN_TRAMITAR_CREDITOP = Target.the("Botón traminar crédito deshabilitado").locatedBy("(//a[contains(text(),'¡Tramitar crédito!')])[1]");
+    public static final Target BTN_CALCULAR_CREDITO_DESH = Target.the("Botón calcular crédito deshabilitado").locatedBy("//button[@ng-click='calculateByMonthlyIncome()' and @disabled]");
+    public static final Target BTN_TRAMITAR_CREDITOP = Target.the("Botón traminar crédito").locatedBy("(//a[contains(text(),'¡Tramitar crédito!')])[1]");
 
     //Campos de calculos realizados
     public static final Target TXT_TRAMITAMOS_CREDITO = Target.the("Ventana emergente para tramitar crédito").locatedBy("//h3[contains(text(),'Tramitamos tu crédito')]");

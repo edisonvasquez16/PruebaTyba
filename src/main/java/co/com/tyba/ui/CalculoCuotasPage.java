@@ -14,12 +14,12 @@ public class CalculoCuotasPage {
 
     //Opciones de interaccion
     public static final Target BTN_CALCULAR_CUOTAS = Target.the("Botón calcular cuotas").locatedBy("//button[@ng-click='calculateByQuota()']");
-    public static final Target BTN_CALCULAR_CUOTAS_DES = Target.the("Botón calcular cuotas deshabilitado").locatedBy("//button[@ng-click='calculateByQuota()' and @disabled]");
-    public static final Target BTN_TRAMITAR_CREDITOC = Target.the("Botón traminar crédito deshabilitado").locatedBy("(//a[contains(text(),'¡Tramitar crédito!')])[2]");
+    public static final Target BTN_CALCULAR_CUOTAS_DESH = Target.the("Botón calcular cuotas deshabilitado").locatedBy("//button[@ng-click='calculateByQuota()' and @disabled]");
+    public static final Target BTN_TRAMITAR_CREDITOC = Target.the("Botón tramitar crédito ").locatedBy("(//a[contains(text(),'¡Tramitar crédito!')])[2]");
 
     //Campos de calculos realizados
     public static final Target TXT_DATOS_PRESTAMO = Target.the("Datos de cuotas").locatedBy("//dd");
     public static final Target TXT_DATOS_TASA_INTERES = Target.the("Datos de tasa interes").locatedBy("//td[@class='ng-binding']");
-    public static final Target MSJ_VALORCREDITO_MINIMO = Target.the("Mensaje de validación ingreso mínimo").locatedBy("//p[contains(text(),'El valor del crédito debe ser mayor o igual a $15,000,000.')]");
+    public static final Target MSJ_VALORCREDITO_MINIMO = Target.the("Mensaje de validación crédito mínimo").locatedBy("//p[contains(text(),'El valor del crédito debe ser mayor o igual a $15,000,000.')]");
 
 }

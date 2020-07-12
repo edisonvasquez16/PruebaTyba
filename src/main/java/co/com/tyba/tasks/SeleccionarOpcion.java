@@ -22,6 +22,7 @@ public class SeleccionarOpcion implements Task {
         this.caso = caso;
     }
 
+    //Método encargado de seleccionar las diferentes opciones del módulo, dependiendo de que parámetro se reciba en el constructor
     @Override
     public <T extends Actor> void performAs(T actor) {
         switch (opcion) {

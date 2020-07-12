@@ -22,6 +22,7 @@ public class DiligenciarDatosCuotas implements Task {
         this.plazoAnios = plazoAnios;
     }
 
+    //Método encargado de diligenciar los datos para el cálculo de Cuotas
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(

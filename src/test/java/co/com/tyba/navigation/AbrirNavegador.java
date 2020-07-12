@@ -12,6 +12,7 @@ import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver
 
 public class AbrirNavegador implements Task {
 
+    //Tarea encargada de realizar la apertura del navegador en la página especificada
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Open.browserOn(new MetroCuadradoPage()));

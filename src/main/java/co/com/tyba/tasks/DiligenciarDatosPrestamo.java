@@ -23,6 +23,7 @@ public class DiligenciarDatosPrestamo implements Task {
         return instrumented(DiligenciarDatosPrestamo.class, ingresosMensuales, plazoAnios);
     }
 
+    //Método encargado de diligenciar los datos para el cálculo de Crédito
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
