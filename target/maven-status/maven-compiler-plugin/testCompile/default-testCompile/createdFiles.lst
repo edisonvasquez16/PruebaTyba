@@ -1,0 +1,6 @@
+co\com\tyba\stepdefinitions\SetTheStage.class
+co\com\tyba\stepdefinitions\IngresoWebSteps.class
+co\com\tyba\runners\ValidarCalculadoraRunner.class
+co\com\tyba\stepdefinitions\CalculoCuotasSteps.class
+co\com\tyba\navigation\AbrirNavegador.class
+co\com\tyba\stepdefinitions\CalculoPrestamoSteps.class

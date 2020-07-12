@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: co.com.tyba.runners.ValidarCalculadoraRunner
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 191.547 s - in co.com.tyba.runners.ValidarCalculadoraRunner

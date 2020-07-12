@@ -8,6 +8,7 @@ import co.com.tyba.tasks.SeleccionarOpcion;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
+import cucumber.api.java.es.Y;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ import static co.com.tyba.ui.CalculoPrestamoPage.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static net.serenitybdd.screenplay.questions.WebElementQuestion.the;
 import static org.hamcrest.Matchers.hasItems;
 
@@ -56,4 +58,22 @@ public class CalculoPrestamoSteps {
                 seeThat(the(BTN_CALCULAR_CREDITO_DES), isPresent())
         );
     }
+
+    @Entonces("^el ve el mensaje de valor ingreso minimo$")
+    public void veMensajeValorIngresoMinimo() {
+        theActorInTheSpotlight().should(
+                seeThat(the(MSJ_INGRESO_MINIMO), isPresent()));
+    }
+
+    @Y("^selecciona la opcion de Tramitar credito para (.*)$")
+    public void seleccionaLaOpcionDeTramitarCreditoParaPrestamo(String caso) {
+        theActorInTheSpotlight().wasAbleTo(SeleccionarOpcion.tramitarCredito(caso));
+    }
+
+    @Entonces("^el ve la ventana emergente para realizar tramite de credito$")
+    public void veVentanaEmergenteRealizarTramiteDeCredito() {
+        theActorInTheSpotlight().should(
+                seeThat(the(TXT_TRAMITAMOS_CREDITO), isVisible()));
+    }
+
 }

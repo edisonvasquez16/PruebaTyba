@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="9aa4af1037cd19fd1a58981a67b802c014c2e451d0f71572e2f98abb6e2fb2dd.html">Realizar Validaciones De C&aacute;lculos Para El M&oacute;dulo CALCULADORA DE CREDITO PARA VIVIENDA</a></span>
+                > <span class="truncate-60"><a
+                    href="8badb6ab42a565b5c6879fd27bad6c07e58afa51c0675bdd97260ea08ac8e2b7.html">Validar c&aacute;lculos de cr&eacute;dito </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-07-2020 20:11</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Realizar Validaciones De Cálculos Para El Módulo CALCULADORA DE CREDITO PARA VIVIENDA [CP-001]</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como un usuario<br />
+Quiero usar el formulario de CALCULADORA DE CREDITO PARA VIVIENDA<br />
+Para realizar diferentes cálculos
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="170f115c0acc99afb0dfaca81a69efcb4e830495fa1a6b88d6525c78627462f7.html">CP-002
+                                    (issue)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="ee137557d51f3e3e82f2a3b1143aec419cfacb62bf5e7557695c905bc577a100.html">CP-001
+                                    (issue)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="dcb2aa1463bc9b2f47b3d723dfed7e9f2a5b85fc37046124bc6100bdfcbe407a.html">Calcular Cuanto Prestan
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Validar c&aacute;lculos de cr&eacute;dito
+                                    <span class="related-issue-title">(CP-001, CP-002)</span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que el usuario ingresa para el calculo de prestamo los datos &lt;ingresosMensuales&gt; y &lt;plazoAnios&gt;<br>Cuando selecciona la opcion de calcular credito<br>Entonces el ve los calculos correspondientes para prestamo<br><table class='embedded'><tbody><tr><td>&lt;vistaIngresosMensuales&gt;</td><td>&lt;valorPrestamo&gt;</td><td>&lt;cuotaInicial&gt;</td><td>&lt;valorInmueble&gt;</td><td>&lt;valorCuota&gt;</td><td>&lt;tasaInteres&gt;</td></tr></tbody></table></div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Example: {ingresosMensuales=6000000, plazoAnios=10 A&ntilde;os, vistaIngresosMensuales=$ 6,000,000, valorPrestamo=$ 137,369,269, cuotaInicial=$ 58,872,544, valorInmueble=$ 196,241,812, valorCuota=$ 1,800,000, tasaInteres=10.25%}" width="1034"/>
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Dado que el usuario Edison accede hasta la pagina de metrocuadrado" width="1034"/>
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Edison abrir navegador" width="1034"/>
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Edison opens the Metro cuadrado page" width="1034"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Edison abrir navegador (completed)" width="1366"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Dado que el usuario Edison accede hasta la pagina de metrocuadrado (completed)" width="1366"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Cuando accede hasta el modulo de CALCULADORA DE CREDITO PARA VIVIENDA" width="1366"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Edison acceder modulo" width="1366"/>
+                <img src="4b12929e5445947a24bd8523c01977d515759894757de6fa7d889b84e90441dd.png" title=" Edison clicks on Opci&oacute;n Sub-men&uacute; Calculadora credito" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison clicks on Opci&oacute;n Sub-men&uacute; Calculadora credito (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison acceder modulo (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Cuando accede hasta el modulo de CALCULADORA DE CREDITO PARA VIVIENDA (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Dado que el usuario ingresa para el calculo de prestamo los datos 6000000 y 10 A&ntilde;os" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison diligenciar datos prestamo" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison clicks on Opcion para acceder a la ventana de c&aacute;lculo de prestamo" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison clicks on Opcion para acceder a la ventana de c&aacute;lculo de prestamo (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison enters '6000000' into Caja de texto ingresos mensuales" width="1366"/>
+                <img src="2560002dc5277018af7683485e8126863c74a29c546d68a4853e9f76fb99ecb6.png" title=" Edison enters '6000000' into Caja de texto ingresos mensuales (completed)" width="1366"/>
+                <img src="2560002dc5277018af7683485e8126863c74a29c546d68a4853e9f76fb99ecb6.png" title=" Edison select 10 A&ntilde;os on Select plazo en A&ntilde;os" width="1366"/>
+                <img src="97411d881c1c98a3afa0ad184818f7b25fec27854fd1029b38f14fb757f98c21.png" title=" Edison select 10 A&ntilde;os on Select plazo en A&ntilde;os (completed)" width="1366"/>
+                <img src="97411d881c1c98a3afa0ad184818f7b25fec27854fd1029b38f14fb757f98c21.png" title=" Edison diligenciar datos prestamo (completed)" width="1366"/>
+                <img src="97411d881c1c98a3afa0ad184818f7b25fec27854fd1029b38f14fb757f98c21.png" title=" Dado que el usuario ingresa para el calculo de prestamo los datos 6000000 y 10 A&ntilde;os (completed)" width="1366"/>
+                <img src="97411d881c1c98a3afa0ad184818f7b25fec27854fd1029b38f14fb757f98c21.png" title=" Cuando selecciona la opcion de calcular credito" width="1366"/>
+                <img src="97411d881c1c98a3afa0ad184818f7b25fec27854fd1029b38f14fb757f98c21.png" title=" Edison seleccionar opcion" width="1366"/>
+                <img src="97411d881c1c98a3afa0ad184818f7b25fec27854fd1029b38f14fb757f98c21.png" title=" Edison clicks on Bot&oacute;n calcular cr&eacute;dito" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Edison clicks on Bot&oacute;n calcular cr&eacute;dito (completed)" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Edison seleccionar opcion (completed)" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Cuando selecciona la opcion de calcular credito (completed)" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Entonces el ve los calculos correspondientes para prestamo
+| $ 6,000,000 | $ 137,369,269 | $ 58,872,544 | $ 196,241,812 | $ 1,800,000 | 10.25% |" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Then textos disponibles should be (a collection containing '$ 6,000,000' and a collection containing '$ 137,369,269' and a collection containing '$ 58,872,544' and a collection containing '$ 196,241,812')" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Then textos disponibles should be (a collection containing '$ 6,000,000' and a collection containing '$ 137,369,269' and a collection containing '$ 58,872,544' and a collection containing '$ 196,241,812') (completed)" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Then textos disponibles should be (a collection containing '$ 1,800,000' and a collection containing '10.25%')" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Then textos disponibles should be (a collection containing '$ 1,800,000' and a collection containing '10.25%') (completed)" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Entonces el ve los calculos correspondientes para prestamo
+| $ 6,000,000 | $ 137,369,269 | $ 58,872,544 | $ 196,241,812 | $ 1,800,000 | 10.25% | (completed)" width="1366"/>
+                <img src="041d8eb6fd6e40289c0f6d18eaf58eb149fe0abbfb709d6dda49d0f97f2c19e3.png" title=" Example: {ingresosMensuales=6000000, plazoAnios=10 A&ntilde;os, vistaIngresosMensuales=$ 6,000,000, valorPrestamo=$ 137,369,269, cuotaInicial=$ 58,872,544, valorInmueble=$ 196,241,812, valorCuota=$ 1,800,000, tasaInteres=10.25%} (completed)" width="1366"/>
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Example: {ingresosMensuales=8000000, plazoAnios=20 A&ntilde;os, vistaIngresosMensuales=$ 8,000,000, valorPrestamo=$ 252,189,735, cuotaInicial=$ 108,081,315, valorInmueble=$ 360,271,050, valorCuota=$ 2,400,000, tasaInteres=10.25%}" width="1034"/>
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Dado que el usuario Edison accede hasta la pagina de metrocuadrado" width="1034"/>
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Edison abrir navegador" width="1034"/>
+                <img src="aaad9f5b2ee4a0903020bd9ef008ed8b66c79a804af768905e05f37cf490bca4.png" title=" Edison opens the Metro cuadrado page" width="1034"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Edison abrir navegador (completed)" width="1366"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Dado que el usuario Edison accede hasta la pagina de metrocuadrado (completed)" width="1366"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Cuando accede hasta el modulo de CALCULADORA DE CREDITO PARA VIVIENDA" width="1366"/>
+                <img src="82568ffd2b3bc6fce680ddb36307faad74457765127147be7792ac5fdfbb93a1.png" title=" Edison acceder modulo" width="1366"/>
+                <img src="4b12929e5445947a24bd8523c01977d515759894757de6fa7d889b84e90441dd.png" title=" Edison clicks on Opci&oacute;n Sub-men&uacute; Calculadora credito" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison clicks on Opci&oacute;n Sub-men&uacute; Calculadora credito (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison acceder modulo (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Cuando accede hasta el modulo de CALCULADORA DE CREDITO PARA VIVIENDA (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Dado que el usuario ingresa para el calculo de prestamo los datos 8000000 y 20 A&ntilde;os" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison diligenciar datos prestamo" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison clicks on Opcion para acceder a la ventana de c&aacute;lculo de prestamo" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison clicks on Opcion para acceder a la ventana de c&aacute;lculo de prestamo (completed)" width="1366"/>
+                <img src="71694c8d446b123c2b3b9a5a2513f8b91f08e0f09ff88a67a728441aaa311e5e.png" title=" Edison enters '8000000' into Caja de texto ingresos mensuales" width="1366"/>
+                <img src="7c51b36b2fccdbf6d40a6491b9aa5f177f408d6a8317fad28c904e3af3350fd9.png" title=" Edison enters '8000000' into Caja de texto ingresos mensuales (completed)" width="1366"/>
+                <img src="7c51b36b2fccdbf6d40a6491b9aa5f177f408d6a8317fad28c904e3af3350fd9.png" title=" Edison select 20 A&ntilde;os on Select plazo en A&ntilde;os" width="1366"/>
+                <img src="9b2f2f50ed37c6f463b8f7a291767a924527f52579c9d1ade841c82eeb078348.png" title=" Edison select 20 A&ntilde;os on Select plazo en A&ntilde;os (completed)" width="1366"/>
+                <img src="9b2f2f50ed37c6f463b8f7a291767a924527f52579c9d1ade841c82eeb078348.png" title=" Edison diligenciar datos prestamo (completed)" width="1366"/>
+                <img src="9b2f2f50ed37c6f463b8f7a291767a924527f52579c9d1ade841c82eeb078348.png" title=" Dado que el usuario ingresa para el calculo de prestamo los datos 8000000 y 20 A&ntilde;os (completed)" width="1366"/>
+                <img src="9b2f2f50ed37c6f463b8f7a291767a924527f52579c9d1ade841c82eeb078348.png" title=" Cuando selecciona la opcion de calcular credito" width="1366"/>
+                <img src="9b2f2f50ed37c6f463b8f7a291767a924527f52579c9d1ade841c82eeb078348.png" title=" Edison seleccionar opcion" width="1366"/>
+                <img src="9b2f2f50ed37c6f463b8f7a291767a924527f52579c9d1ade841c82eeb078348.png" title=" Edison clicks on Bot&oacute;n calcular cr&eacute;dito" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Edison clicks on Bot&oacute;n calcular cr&eacute;dito (completed)" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Edison seleccionar opcion (completed)" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Cuando selecciona la opcion de calcular credito (completed)" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Entonces el ve los calculos correspondientes para prestamo
+| $ 8,000,000 | $ 252,189,735 | $ 108,081,315 | $ 360,271,050 | $ 2,400,000 | 10.25% |" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Then textos disponibles should be (a collection containing '$ 8,000,000' and a collection containing '$ 252,189,735' and a collection containing '$ 108,081,315' and a collection containing '$ 360,271,050')" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Then textos disponibles should be (a collection containing '$ 8,000,000' and a collection containing '$ 252,189,735' and a collection containing '$ 108,081,315' and a collection containing '$ 360,271,050') (completed)" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Then textos disponibles should be (a collection containing '$ 2,400,000' and a collection containing '10.25%')" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Then textos disponibles should be (a collection containing '$ 2,400,000' and a collection containing '10.25%') (completed)" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Entonces el ve los calculos correspondientes para prestamo
+| $ 8,000,000 | $ 252,189,735 | $ 108,081,315 | $ 360,271,050 | $ 2,400,000 | 10.25% | (completed)" width="1366"/>
+                <img src="6eeba5ec3f7582318439c854769fab628b3c85d442891e32e6856b2d0e51b3ab.png" title=" Example: {ingresosMensuales=8000000, plazoAnios=20 A&ntilde;os, vistaIngresosMensuales=$ 8,000,000, valorPrestamo=$ 252,189,735, cuotaInicial=$ 108,081,315, valorInmueble=$ 360,271,050, valorCuota=$ 2,400,000, tasaInteres=10.25%} (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.4</span>
+</div>
+</body>
+</html>

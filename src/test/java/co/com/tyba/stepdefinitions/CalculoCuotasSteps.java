@@ -59,4 +59,11 @@ public class CalculoCuotasSteps {
                 seeThat(the(BTN_CALCULAR_CUOTAS_DES), isPresent())
         );
     }
+
+    @Entonces("^el ve el mensaje de valor credito minimo$")
+    public void veMensajeValorCreditoMinimo() {
+        theActorInTheSpotlight().should(
+                seeThat(the(MSJ_VALORCREDITO_MINIMO), isPresent())
+        );
+    }
 }
